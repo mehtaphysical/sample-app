@@ -1,0 +1,24 @@
+node:events:353
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EACCES: permission denied 0.0.0.0:80
+    at Server.setupListenHandle [as _listen2] (node:net:1278:21)
+    at listenInCluster (node:net:1343:12)
+    at Server.listen (node:net:1429:7)
+    at Function.listen (/home/ryan/code/alchemy/sample-app/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/ryan/code/alchemy/sample-app/server.js:6:5)
+    at Module._compile (node:internal/modules/cjs/loader:1108:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)
+    at Module.load (node:internal/modules/cjs/loader:973:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:813:14)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1322:8)
+    at processTicksAndRejections (node:internal/process/task_queues:80:21) {
+  code: 'EACCES',
+  errno: -13,
+  syscall: 'listen',
+  address: '0.0.0.0',
+  port: 80
+}
